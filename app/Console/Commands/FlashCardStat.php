@@ -61,9 +61,9 @@ class FlashCardStat extends Command
         $headers = ['The total amount of question', '% of questions that have an answer', '% of questions that have a correct answer'];
         $data =[];
         $data[] = array(
-            'The total amount of question' => $flashcard,
-            '% of questions that have an answer' => round(($all_answer/$flashcard)*100, 2),
-            '% of questions that have a correct answer' => round(($correct_answer/$flashcard)*100, 2)
+            'The total amount of question' => $flashcard ,
+            '% of questions that have an answer' => $flashcard != 0 ? round(($all_answer/$flashcard)*100, 2) : 0,
+            '% of questions that have a correct answer' => $flashcard != 0 ? round(($correct_answer/$flashcard)*100, 2) : 0
         );
         $this->table($headers, $data);
         $choice = $this->ask('for back to main menu please enter -1');

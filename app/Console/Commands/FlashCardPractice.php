@@ -118,7 +118,7 @@ class FlashCardPractice extends Command
 
         // Set the contents of the table.
         $table->addRow($separator);
-        $table->addRows([[new TableCell('% of Completion', ['colspan' => 2]), round(($correct_count/$flashcard_count)*100, 2)]]);
+        $table->addRows([[new TableCell('% of Completion', ['colspan' => 2]), $flashcard_count != 0 ?  round(($correct_count/$flashcard_count)*100, 2) : 0]]);
 
         // Render the table to the output.
         $table->render();
