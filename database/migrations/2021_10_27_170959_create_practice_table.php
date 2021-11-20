@@ -18,7 +18,7 @@ class CreatePracticeTable extends Migration
             $table->bigInteger('card_id')->unsigned();
             $table->foreign('card_id')->references('id')->on('flashcards')->onDelete('cascade');
             $table->string('username', 255);
-            $table->enum('status', [1,2,3])->comment('1=answered. 2=incorrect, 3=Not answered');
+            $table->tinyInteger('status')->comment('1=answered. 2=incorrect, 3=Not answered');
             $table->timestamps();
         });
     }

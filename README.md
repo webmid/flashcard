@@ -1,5 +1,9 @@
 # Flashcard
 
+## Description
+This project written by Laravel and artisan cli that you can add your flash card and answer all flash card question and see your report, etc.
+
+The purpose of this project is that you learn writing code in command line Laravel.
 ## Installation
 after clone project:
 
@@ -35,10 +39,7 @@ for example:
 php artisan flashcard:interactive omid@omid.com
 ```
 
-**Note**: There are several ways to get username and I used argument. this way has some benefits such as we get username only one time from user during the process.
+**Note**: There are several ways to get username and authenticate user.
 
-Please let me know if you have any problem or question.
-
-omidrafati67@gmail.com
 
 Regards
